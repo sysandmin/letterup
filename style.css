@@ -1,0 +1,27 @@
+:root {
+  --board: #F2F7FA; --ink: #0E1D31; --muted: #55657A; --well: #E3EAF0;
+  --mint: #1FA672; --periwinkle: #4F63E0;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --board: #1F3A5A; --ink: #E3ECF3; --muted: #A9B8C8; --well: #284A70; --mint: #6FD9AE; --periwinkle: #A3AFFF; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--board); color: var(--ink);
+  font: 18px/1.6 "Bricolage Grotesque", system-ui, -apple-system, sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+.logo { font-weight: 800; font-size: 28px; letter-spacing: 3px; text-decoration: none; color: var(--ink); }
+.logo .l { color: var(--mint); } .logo .u { color: var(--periwinkle); }
+nav { display: flex; gap: 20px; align-items: baseline; flex-wrap: wrap; margin-bottom: 40px; }
+nav a:not(.logo) { color: var(--muted); font-weight: 700; }
+h1 { font-size: 40px; line-height: 1.15; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 36px 0 6px; }
+.meta { color: var(--muted); margin: 0 0 28px; }
+a { color: var(--periwinkle); }
+.card { background: var(--well); border-radius: 24px; padding: 24px 28px; margin: 28px 0; }
+.tiles { display: flex; gap: 8px; margin: 8px 0 24px; flex-wrap: wrap; }
+.tiles span { width: 52px; height: 52px; border-radius: 12px; display: grid; place-items: center;
+  font-weight: 800; font-size: 28px; color: #0E1D31; background: var(--mint); }
+.tiles span:last-child { background: var(--periwinkle); color: #fff; }
+footer { margin-top: 56px; color: var(--muted); font-size: 15px; }
